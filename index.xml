@@ -2,38 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>电脑小知识</title>
-    <link>http://localhost:1313/</link>
+    <link>https://xhc757.github.io/</link>
     <description>Recent content on 电脑小知识</description>
     <generator>Hugo -- 0.154.5</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sat, 31 Jan 2026 16:13:41 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://xhc757.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>使用 Github Pages 和 Hugo 搭建个人博客</title>
-      <link>http://localhost:1313/posts/%E4%BD%BF%E7%94%A8-github-pages-%E5%92%8C-hugo-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
+      <link>https://xhc757.github.io/posts/%E4%BD%BF%E7%94%A8-github-pages-%E5%92%8C-hugo-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
       <pubDate>Sat, 31 Jan 2026 16:13:41 +0800</pubDate>
-      <guid>http://localhost:1313/posts/%E4%BD%BF%E7%94%A8-github-pages-%E5%92%8C-hugo-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
-      <description>&lt;h2 id=&#34;github-pages&#34;&gt;Github Pages&lt;/h2&gt;
-&lt;p&gt;在 github 新建一个仓库，仓库名设置为 username.github.io(username必须是github的用户名)，稍等几分钟即可使用 username.github.io 访问&lt;/p&gt;
-&lt;h2 id=&#34;使用hugo生成博客&#34;&gt;使用Hugo生成博客&lt;/h2&gt;
-&lt;p&gt;需要在username.github.io上传我们的网站内容。我们可以手动制作网页，但为了方便，我们可以使用静态内容生成器，比如Peliacan。&lt;/p&gt;
-&lt;h2 id=&#34;安装hugo&#34;&gt;安装Hugo&lt;/h2&gt;
-&lt;p&gt;在windows下面安装Hugo只需要下载单个可执行文件，然后将其位置添加到PATH环境变量。打开powershell窗口，输入hugo version回车，如果显示hugo说明已经安装好了。&lt;/p&gt;
-&lt;p&gt;##快速上手hugo&lt;/p&gt;
-&lt;p&gt;输入 hugo new site xhc757.github.io 回车，会创建文件夹xhc757.github.io，打开文件夹会看到生成了很多文件和文件夹&lt;/p&gt;
-&lt;p&gt;进入这个目录，输入 hugo new posts\fist-blog.md 回车，这样就生成了一篇博客，我们可以打开这个md文件，创作自己的博客&lt;/p&gt;
-&lt;p&gt;我们还需设置一个主题，下载一个hugo theme，放到 thems文件下，然后打开hugo.toml, 指定主题&lt;/p&gt;
-&lt;p&gt;接下来输入 hugo，就会生成网页，输出在 public文件夹，这个文件夹不会自动清空，如果有需要，我们可以在每次生成前手动清空Public文件&lt;/p&gt;
-&lt;p&gt;然后输入 hugo server 回车，在浏览器打开 http://localhost:1313/ 就可以预览博客&lt;/p&gt;
-&lt;h2 id=&#34;详细配置hugo&#34;&gt;详细配置hugo&lt;/h2&gt;
-&lt;p&gt;可以看到生成的网站非常简陋，接下来我们详细配置hugo&lt;/p&gt;
-&lt;h2 id=&#34;推送到github&#34;&gt;推送到Github&lt;/h2&gt;</description>
+      <guid>https://xhc757.github.io/posts/%E4%BD%BF%E7%94%A8-github-pages-%E5%92%8C-hugo-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
+      <description>&lt;h2 id=&#34;github-pages-是什么&#34;&gt;Github Pages 是什么&lt;/h2&gt;
+&lt;p&gt;Github Pages 是 Github 提供的免费静态内容托管服务。在 Github 新建一个名为 xhc757.github.io 的仓库，xhc757替换为你注册 GitHub 使用的用户名，稍等几分钟即可使用 xhc757.github.io 访问网站。Github Pages 站点大小不能超过1GB，因此适合用作个人博客或小型网站。&lt;/p&gt;
+&lt;h2 id=&#34;使用-hugo-生成博客&#34;&gt;使用 Hugo 生成博客&lt;/h2&gt;
+&lt;p&gt;现在网站是空的，我们需要往仓库上传我们的网站内容。我们可以手动制作网页，但为了方便，我们通常会使用静态内容生成器。起初我尝试了基于 Python 的 Pelican，但很快因为 Pelican 没有好看的主题放弃。我转而使用 Hugo ，因为 Hugo 有一个漂亮的主题 PaperMod，而且 Hugo 安装使用非常简单。&lt;/p&gt;
+&lt;h2 id=&#34;安装-hugo&#34;&gt;安装 Hugo&lt;/h2&gt;
+&lt;p&gt;在 Windows 下安装 Hugo 只需要下载单个可执行文件，然后将其位置添加到 PATH 环境变量。打开 Powershell 窗口，输入 hugo version 回车，如果显示 Hugo 版本信息说明已经安装好了。&lt;/p&gt;
+&lt;h2 id=&#34;快速上手-hugo&#34;&gt;快速上手 Hugo&lt;/h2&gt;
+&lt;p&gt;在 Powershell 窗口输入 hugo new site xhc757.github.io 回车，会创建文件夹xhc757.github.io，打开文件夹会看到自动生成了很多文件和文件夹，其中 hugo.toml 是 hugo 的配置文件。&lt;/p&gt;
+&lt;p&gt;进入这个目录，输入 hugo new posts\first-blog.md 回车，这样就生成了一篇博文，我们可以用 Markdown 编辑器打开 first-blog.md 文件编写博文。注意文件头部有一些元数据，其中 draft = true 意思是这篇博客是草稿，默认情况下 Hugo 不会为其生成网页。如果我们要将此篇博文发表，应要把 draft = true 改为 draft = false。&lt;/p&gt;</description>
     </item>
     <item>
       <title>关于我</title>
-      <link>http://localhost:1313/about/</link>
+      <link>https://xhc757.github.io/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/about/</guid>
+      <guid>https://xhc757.github.io/about/</guid>
       <description>about</description>
     </item>
   </channel>
