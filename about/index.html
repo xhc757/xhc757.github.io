@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="auto" data-theme="auto">
+<html lang="zh" dir="auto" data-theme="auto">
 
 <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,15 +10,15 @@
 <meta name="description" content="about">
 <meta name="author" content="">
 <link rel="canonical" href="https://xhc757.github.io/about/">
-<link crossorigin="anonymous" href="../assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css" integrity="sha256-2jIR5e&#43;Ge/K3X9WmUVz&#43;1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://xhc757.github.io/favicon.ico">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css" integrity="sha256-2jIR5e&#43;Ge/K3X9WmUVz&#43;1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://xhc757.github.io/images/avatar.jpg">
 <link rel="icon" type="image/png" sizes="16x16" href="https://xhc757.github.io/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://xhc757.github.io/favicon-32x32.png">
 <link rel="apple-touch-icon" href="https://xhc757.github.io/apple-touch-icon.png">
 <link rel="mask-icon" href="https://xhc757.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://xhc757.github.io/about/">
+<link rel="alternate" hreflang="zh" href="https://xhc757.github.io/about/">
 <noscript>
     <style>
         #theme-toggle,
@@ -106,8 +106,8 @@
     
   ],
   "articleBody": "我是匹老板\n欢迎访问我的个人网站\n",
-  "wordCount" : "2",
-  "inLanguage": "en",
+  "wordCount" : "15",
+  "inLanguage": "zh",
   "datePublished": "0001-01-01T00:00:00Z",
   "dateModified": "0001-01-01T00:00:00Z",
   "mainEntityOfPage": {
@@ -119,7 +119,7 @@
     "name": "电脑小知识",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://xhc757.github.io/favicon.ico"
+      "url": "https://xhc757.github.io/images/avatar.jpg"
     }
   }
 }
@@ -185,10 +185,11 @@
     <h1 class="post-title entry-hint-parent">
       关于我
     </h1>
-    <div class="post-meta">
+    <div class="post-meta"><span>15 字</span>
 
 </div>
   </header> 
+
   <div class="post-content"><p>我是匹老板</p>
 <p>欢迎访问我的个人网站</p>
 
@@ -276,6 +277,53 @@
         }
     })
 
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = '复制';
+
+        function copyingDone() {
+            copybutton.innerHTML = '已复制！';
+            setTimeout(() => {
+                copybutton.innerHTML = '复制';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
 </script>
 </body>
 
