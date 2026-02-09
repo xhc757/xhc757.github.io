@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="zh" dir="auto" data-theme="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>使用 Github Pages 和 Hugo 搭建个人博客 | 电脑小知识</title>
+<meta name="keywords" content="">
+<meta name="description" content="Github Pages 是什么
+Github Pages 是 Github 提供的免费静态内容托管服务。在 Github 新建一个名为 xhc757.github.io 的仓库，xhc757替换为你注册 GitHub 使用的用户名，稍等几分钟即可使用 xhc757.github.io 访问网站。Github Pages 站点大小不能超过1GB，因此适合用作个人博客或小型网站。">
+<meta name="author" content="">
+<link rel="canonical" href="https://xhc757.github.io/posts/%E4%BD%BF%E7%94%A8-github-pages-%E5%92%8C-hugo-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css" integrity="sha256-2jIR5e&#43;Ge/K3X9WmUVz&#43;1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://xhc757.github.io/images/avatar.jpg">
+<link rel="icon" type="image/png" sizes="16x16" href="https://xhc757.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://xhc757.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://xhc757.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://xhc757.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="zh" href="https://xhc757.github.io/posts/%E4%BD%BF%E7%94%A8-github-pages-%E5%92%8C-hugo-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><meta property="og:url" content="https://xhc757.github.io/posts/%E4%BD%BF%E7%94%A8-github-pages-%E5%92%8C-hugo-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
+  <meta property="og:site_name" content="电脑小知识">
+  <meta property="og:title" content="使用 Github Pages 和 Hugo 搭建个人博客">
+  <meta property="og:description" content="Github Pages 是什么 Github Pages 是 Github 提供的免费静态内容托管服务。在 Github 新建一个名为 xhc757.github.io 的仓库，xhc757替换为你注册 GitHub 使用的用户名，稍等几分钟即可使用 xhc757.github.io 访问网站。Github Pages 站点大小不能超过1GB，因此适合用作个人博客或小型网站。">
+  <meta property="og:locale" content="zh-cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-01-31T16:13:41+08:00">
+    <meta property="article:modified_time" content="2026-01-31T16:13:41+08:00">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="使用 Github Pages 和 Hugo 搭建个人博客">
+<meta name="twitter:description" content="Github Pages 是什么
+Github Pages 是 Github 提供的免费静态内容托管服务。在 Github 新建一个名为 xhc757.github.io 的仓库，xhc757替换为你注册 GitHub 使用的用户名，稍等几分钟即可使用 xhc757.github.io 访问网站。Github Pages 站点大小不能超过1GB，因此适合用作个人博客或小型网站。">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://xhc757.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "使用 Github Pages 和 Hugo 搭建个人博客",
+      "item": "https://xhc757.github.io/posts/%E4%BD%BF%E7%94%A8-github-pages-%E5%92%8C-hugo-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "使用 Github Pages 和 Hugo 搭建个人博客",
+  "name": "使用 Github Pages 和 Hugo 搭建个人博客",
+  "description": "Github Pages 是什么 Github Pages 是 Github 提供的免费静态内容托管服务。在 Github 新建一个名为 xhc757.github.io 的仓库，xhc757替换为你注册 GitHub 使用的用户名，稍等几分钟即可使用 xhc757.github.io 访问网站。Github Pages 站点大小不能超过1GB，因此适合用作个人博客或小型网站。\n",
+  "keywords": [
+    
+  ],
+  "articleBody": "Github Pages 是什么 Github Pages 是 Github 提供的免费静态内容托管服务。在 Github 新建一个名为 xhc757.github.io 的仓库，xhc757替换为你注册 GitHub 使用的用户名，稍等几分钟即可使用 xhc757.github.io 访问网站。Github Pages 站点大小不能超过1GB，因此适合用作个人博客或小型网站。\n使用 Hugo 生成博客 现在网站是空的，我们需要往仓库上传我们的网站内容。我们可以手动制作网页，但为了方便，我们通常会使用静态内容生成器。起初我尝试了基于 Python 的 Pelican，但很快因为 Pelican 没有好看的主题放弃。我转而使用 Hugo ，因为 Hugo 有一个漂亮的主题 PaperMod，而且 Hugo 安装使用非常简单。\n安装 Hugo 在 Windows 下安装 Hugo 只需要下载单个可执行文件，然后将其位置添加到 PATH 环境变量。打开 Powershell 窗口，输入 hugo version 回车，如果显示 Hugo 版本信息说明已经安装好了。\n快速上手 Hugo 在 Powershell 窗口输入 hugo new site xhc757.github.io 回车，会创建文件夹xhc757.github.io，打开文件夹会看到自动生成了很多文件和文件夹，其中 hugo.toml 是 hugo 的配置文件。\n进入这个目录，输入 hugo new posts\\first-blog.md 回车，这样就生成了一篇博文，我们可以用 Markdown 编辑器打开 first-blog.md 文件编写博文。注意文件头部有一些元数据，其中 draft = true 意思是这篇博客是草稿，默认情况下 Hugo 不会为其生成网页。如果我们要将此篇博文发表，应要把 draft = true 改为 draft = false。\n我们还必须为博客指定一个主题，下载一个 hugo theme 比如 PaperMod，放到 themes 文件下，然后编辑hugo.toml，输入 theme = ‘PaperMod’。\n接下来输入 hugo，就会生成网页，输出在 public 文件夹。这个文件夹不会自动清空，如果有需要，我们可以在生成前手动清空 public 文件夹。\n然后输入 hugo server 回车，在浏览器打开 http://localhost:1313/ 就可以预览博客了。\n详细配置 Hugo 可以看到生成的网站非常简陋，接下来我们详细配置hugo\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 baseURL = 'https://xhc757.github.io/' languageCode = 'zh-cn' title = '电脑小知识' theme = 'PaperMod' hasCJKLanguage = true # 语言设置 defaultContentLanguage = \"zh\" # 单语言，必须在此处，以下设置之前 [languages] [languages.zh] languageName = \"中文\" # 此项为搜索功能必需 [outputs] home = [\"HTML\", \"RSS\", \"JSON\"] [params] defaultTheme = \"auto\" # light , dark ShowCodeCopyButtons = true ShowShareButtons = false ShowReadingTime = false ShowBreadCrumbs = false ShowWordCount = true UseHugoToc = true ShowToc = true TocOpen = true # home-info mode [params.homeInfoParams] Title = \"你好，我是匹老板 \\U0001F44B\" Content = \"欢迎来到我的博客\" # [[params.socialIcons]] # name = \"bilibili\" # url = \"https://space.bilibili.com/1732187136/\" # [[params.socialIcons]] # name = \"douyin\" # url = \"https://douyin.com/\" # [[params.socialIcons]] # name = \"VLINK\" # url = \"https://vlink.cc/amd/\" [params.assets] disableHLJS = false # 禁用代码高亮JS favicon = \"/images/avatar.jpg\" [menu] [[menu.main]] identifier = \"home\" name = \"首页\" url = \"/\" weight = 10 [[menu.main]] identifier = \"archives\" name = \"归档\" url = \"/archives/\" weight = 20 [[menu.main]] identifier = \"search\" name = \"搜索\" url = \"/search/\" weight = 30 [[menu.main]] identifier = \"about\" name = \"关于\" url = \"/about/\" weight = 40 [markup] [markup.highlight] noClasses = false anchorLineNos = true codeFences = true guessSyntax = true lineNos = true style = \"monokai\" [markup.goldmark.renderer] unsafe = true # 允许嵌入 HTML 推送到 Github 使用 hugo server 命令时生成的网页 url 前缀是基于 localhost 的，方便我们在本地预览。所以在推送前务必使用 hugo 重新生成网页，然后再使用 Sourcetree 把 public 文件夹下面的所有文件推送到 xhc757.github.io 仓库\n感想 刚开始我还兴致勃勃的，但是很快我就有。我本来以为github.io这个域名没有被墙，现在发现是时断时续的。其次 Github 屏蔽了百度爬虫，百度搜索不到。\n参考资料 1.GitHub Pages 文档\n2.Hugo 文档\n3.Hugo + PaperMod 从零搭建教程\n4.Hugo以及PaperMod主题的配置\n5.折腾 Hugo PaperMod 主题\n6.时间线（Archives）月份中文化\n7.github action实现自动编译发布github Pages\n8.Hugo + GitHub Action，搭建你的博客自动发布系统\n9.GitHub Pages 禁止百度蜘蛛爬取的问题\n10.给网站添加一只看板娘\n",
+  "wordCount" : "1404",
+  "inLanguage": "zh",
+  "datePublished": "2026-01-31T16:13:41+08:00",
+  "dateModified": "2026-01-31T16:13:41+08:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://xhc757.github.io/posts/%E4%BD%BF%E7%94%A8-github-pages-%E5%92%8C-hugo-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "电脑小知识",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://xhc757.github.io/images/avatar.jpg"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://xhc757.github.io/" accesskey="h" title="电脑小知识 (Alt + H)">电脑小知识</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://xhc757.github.io/" title="首页">
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://xhc757.github.io/archives/" title="归档">
+                    <span>归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://xhc757.github.io/search/" title="搜索 (Alt &#43; /)" accesskey=/>
+                    <span>搜索</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://xhc757.github.io/about/" title="关于">
+                    <span>关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      使用 Github Pages 和 Hugo 搭建个人博客
+    </h1>
+    <div class="post-meta"><span title='2026-01-31 16:13:41 +0800 +0800'>2026年1月31日</span>&nbsp;·&nbsp;<span>1404 字</span>
+
+</div>
+  </header> <div class="toc">
+    <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">目录</span>
+        </summary>
+
+        <div class="inner"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#github-pages-是什么">Github Pages 是什么</a></li>
+        <li><a href="#使用-hugo-生成博客">使用 Hugo 生成博客</a></li>
+        <li><a href="#安装-hugo">安装 Hugo</a></li>
+        <li><a href="#快速上手-hugo">快速上手 Hugo</a></li>
+        <li><a href="#详细配置-hugo">详细配置 Hugo</a></li>
+        <li><a href="#推送到-github">推送到 Github</a></li>
+        <li><a href="#感想">感想</a></li>
+        <li><a href="#参考资料">参考资料</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h3 id="github-pages-是什么">Github Pages 是什么<a hidden class="anchor" aria-hidden="true" href="#github-pages-是什么">#</a></h3>
+<p>Github Pages 是 Github 提供的免费静态内容托管服务。在 Github 新建一个名为 xhc757.github.io 的仓库，xhc757替换为你注册 GitHub 使用的用户名，稍等几分钟即可使用 xhc757.github.io 访问网站。Github Pages 站点大小不能超过1GB，因此适合用作个人博客或小型网站。</p>
+<h3 id="使用-hugo-生成博客">使用 Hugo 生成博客<a hidden class="anchor" aria-hidden="true" href="#使用-hugo-生成博客">#</a></h3>
+<p>现在网站是空的，我们需要往仓库上传我们的网站内容。我们可以手动制作网页，但为了方便，我们通常会使用静态内容生成器。起初我尝试了基于 Python 的 Pelican，但很快因为 Pelican 没有好看的主题放弃。我转而使用 Hugo ，因为 Hugo 有一个漂亮的主题 PaperMod，而且 Hugo 安装使用非常简单。</p>
+<h3 id="安装-hugo">安装 Hugo<a hidden class="anchor" aria-hidden="true" href="#安装-hugo">#</a></h3>
+<p>在 Windows 下安装 Hugo 只需要下载单个可执行文件，然后将其位置添加到 PATH 环境变量。打开 Powershell 窗口，输入 hugo version 回车，如果显示 Hugo 版本信息说明已经安装好了。</p>
+<h3 id="快速上手-hugo">快速上手 Hugo<a hidden class="anchor" aria-hidden="true" href="#快速上手-hugo">#</a></h3>
+<p>在 Powershell 窗口输入 hugo new site xhc757.github.io 回车，会创建文件夹xhc757.github.io，打开文件夹会看到自动生成了很多文件和文件夹，其中 hugo.toml 是 hugo 的配置文件。</p>
+<p>进入这个目录，输入 hugo new posts\first-blog.md 回车，这样就生成了一篇博文，我们可以用 Markdown 编辑器打开 first-blog.md 文件编写博文。注意文件头部有一些元数据，其中 draft = true 意思是这篇博客是草稿，默认情况下 Hugo 不会为其生成网页。如果我们要将此篇博文发表，应要把 draft = true 改为 draft = false。</p>
+<p>我们还必须为博客指定一个主题，下载一个 hugo theme 比如 PaperMod，放到 themes 文件下，然后编辑hugo.toml，输入 theme = &lsquo;PaperMod&rsquo;。</p>
+<p>接下来输入 hugo，就会生成网页，输出在 public 文件夹。这个文件夹不会自动清空，如果有需要，我们可以在生成前手动清空 public 文件夹。</p>
+<p>然后输入 hugo server 回车，在浏览器打开 http://localhost:1313/ 就可以预览博客了。</p>
+<h3 id="详细配置-hugo">详细配置 Hugo<a hidden class="anchor" aria-hidden="true" href="#详细配置-hugo">#</a></h3>
+<p>可以看到生成的网站非常简陋，接下来我们详细配置hugo</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-0-1"><a class="lnlinks" href="#hl-0-1"> 1</a>
+</span><span class="lnt" id="hl-0-2"><a class="lnlinks" href="#hl-0-2"> 2</a>
+</span><span class="lnt" id="hl-0-3"><a class="lnlinks" href="#hl-0-3"> 3</a>
+</span><span class="lnt" id="hl-0-4"><a class="lnlinks" href="#hl-0-4"> 4</a>
+</span><span class="lnt" id="hl-0-5"><a class="lnlinks" href="#hl-0-5"> 5</a>
+</span><span class="lnt" id="hl-0-6"><a class="lnlinks" href="#hl-0-6"> 6</a>
+</span><span class="lnt" id="hl-0-7"><a class="lnlinks" href="#hl-0-7"> 7</a>
+</span><span class="lnt" id="hl-0-8"><a class="lnlinks" href="#hl-0-8"> 8</a>
+</span><span class="lnt" id="hl-0-9"><a class="lnlinks" href="#hl-0-9"> 9</a>
+</span><span class="lnt" id="hl-0-10"><a class="lnlinks" href="#hl-0-10">10</a>
+</span><span class="lnt" id="hl-0-11"><a class="lnlinks" href="#hl-0-11">11</a>
+</span><span class="lnt" id="hl-0-12"><a class="lnlinks" href="#hl-0-12">12</a>
+</span><span class="lnt" id="hl-0-13"><a class="lnlinks" href="#hl-0-13">13</a>
+</span><span class="lnt" id="hl-0-14"><a class="lnlinks" href="#hl-0-14">14</a>
+</span><span class="lnt" id="hl-0-15"><a class="lnlinks" href="#hl-0-15">15</a>
+</span><span class="lnt" id="hl-0-16"><a class="lnlinks" href="#hl-0-16">16</a>
+</span><span class="lnt" id="hl-0-17"><a class="lnlinks" href="#hl-0-17">17</a>
+</span><span class="lnt" id="hl-0-18"><a class="lnlinks" href="#hl-0-18">18</a>
+</span><span class="lnt" id="hl-0-19"><a class="lnlinks" href="#hl-0-19">19</a>
+</span><span class="lnt" id="hl-0-20"><a class="lnlinks" href="#hl-0-20">20</a>
+</span><span class="lnt" id="hl-0-21"><a class="lnlinks" href="#hl-0-21">21</a>
+</span><span class="lnt" id="hl-0-22"><a class="lnlinks" href="#hl-0-22">22</a>
+</span><span class="lnt" id="hl-0-23"><a class="lnlinks" href="#hl-0-23">23</a>
+</span><span class="lnt" id="hl-0-24"><a class="lnlinks" href="#hl-0-24">24</a>
+</span><span class="lnt" id="hl-0-25"><a class="lnlinks" href="#hl-0-25">25</a>
+</span><span class="lnt" id="hl-0-26"><a class="lnlinks" href="#hl-0-26">26</a>
+</span><span class="lnt" id="hl-0-27"><a class="lnlinks" href="#hl-0-27">27</a>
+</span><span class="lnt" id="hl-0-28"><a class="lnlinks" href="#hl-0-28">28</a>
+</span><span class="lnt" id="hl-0-29"><a class="lnlinks" href="#hl-0-29">29</a>
+</span><span class="lnt" id="hl-0-30"><a class="lnlinks" href="#hl-0-30">30</a>
+</span><span class="lnt" id="hl-0-31"><a class="lnlinks" href="#hl-0-31">31</a>
+</span><span class="lnt" id="hl-0-32"><a class="lnlinks" href="#hl-0-32">32</a>
+</span><span class="lnt" id="hl-0-33"><a class="lnlinks" href="#hl-0-33">33</a>
+</span><span class="lnt" id="hl-0-34"><a class="lnlinks" href="#hl-0-34">34</a>
+</span><span class="lnt" id="hl-0-35"><a class="lnlinks" href="#hl-0-35">35</a>
+</span><span class="lnt" id="hl-0-36"><a class="lnlinks" href="#hl-0-36">36</a>
+</span><span class="lnt" id="hl-0-37"><a class="lnlinks" href="#hl-0-37">37</a>
+</span><span class="lnt" id="hl-0-38"><a class="lnlinks" href="#hl-0-38">38</a>
+</span><span class="lnt" id="hl-0-39"><a class="lnlinks" href="#hl-0-39">39</a>
+</span><span class="lnt" id="hl-0-40"><a class="lnlinks" href="#hl-0-40">40</a>
+</span><span class="lnt" id="hl-0-41"><a class="lnlinks" href="#hl-0-41">41</a>
+</span><span class="lnt" id="hl-0-42"><a class="lnlinks" href="#hl-0-42">42</a>
+</span><span class="lnt" id="hl-0-43"><a class="lnlinks" href="#hl-0-43">43</a>
+</span><span class="lnt" id="hl-0-44"><a class="lnlinks" href="#hl-0-44">44</a>
+</span><span class="lnt" id="hl-0-45"><a class="lnlinks" href="#hl-0-45">45</a>
+</span><span class="lnt" id="hl-0-46"><a class="lnlinks" href="#hl-0-46">46</a>
+</span><span class="lnt" id="hl-0-47"><a class="lnlinks" href="#hl-0-47">47</a>
+</span><span class="lnt" id="hl-0-48"><a class="lnlinks" href="#hl-0-48">48</a>
+</span><span class="lnt" id="hl-0-49"><a class="lnlinks" href="#hl-0-49">49</a>
+</span><span class="lnt" id="hl-0-50"><a class="lnlinks" href="#hl-0-50">50</a>
+</span><span class="lnt" id="hl-0-51"><a class="lnlinks" href="#hl-0-51">51</a>
+</span><span class="lnt" id="hl-0-52"><a class="lnlinks" href="#hl-0-52">52</a>
+</span><span class="lnt" id="hl-0-53"><a class="lnlinks" href="#hl-0-53">53</a>
+</span><span class="lnt" id="hl-0-54"><a class="lnlinks" href="#hl-0-54">54</a>
+</span><span class="lnt" id="hl-0-55"><a class="lnlinks" href="#hl-0-55">55</a>
+</span><span class="lnt" id="hl-0-56"><a class="lnlinks" href="#hl-0-56">56</a>
+</span><span class="lnt" id="hl-0-57"><a class="lnlinks" href="#hl-0-57">57</a>
+</span><span class="lnt" id="hl-0-58"><a class="lnlinks" href="#hl-0-58">58</a>
+</span><span class="lnt" id="hl-0-59"><a class="lnlinks" href="#hl-0-59">59</a>
+</span><span class="lnt" id="hl-0-60"><a class="lnlinks" href="#hl-0-60">60</a>
+</span><span class="lnt" id="hl-0-61"><a class="lnlinks" href="#hl-0-61">61</a>
+</span><span class="lnt" id="hl-0-62"><a class="lnlinks" href="#hl-0-62">62</a>
+</span><span class="lnt" id="hl-0-63"><a class="lnlinks" href="#hl-0-63">63</a>
+</span><span class="lnt" id="hl-0-64"><a class="lnlinks" href="#hl-0-64">64</a>
+</span><span class="lnt" id="hl-0-65"><a class="lnlinks" href="#hl-0-65">65</a>
+</span><span class="lnt" id="hl-0-66"><a class="lnlinks" href="#hl-0-66">66</a>
+</span><span class="lnt" id="hl-0-67"><a class="lnlinks" href="#hl-0-67">67</a>
+</span><span class="lnt" id="hl-0-68"><a class="lnlinks" href="#hl-0-68">68</a>
+</span><span class="lnt" id="hl-0-69"><a class="lnlinks" href="#hl-0-69">69</a>
+</span><span class="lnt" id="hl-0-70"><a class="lnlinks" href="#hl-0-70">70</a>
+</span><span class="lnt" id="hl-0-71"><a class="lnlinks" href="#hl-0-71">71</a>
+</span><span class="lnt" id="hl-0-72"><a class="lnlinks" href="#hl-0-72">72</a>
+</span><span class="lnt" id="hl-0-73"><a class="lnlinks" href="#hl-0-73">73</a>
+</span><span class="lnt" id="hl-0-74"><a class="lnlinks" href="#hl-0-74">74</a>
+</span><span class="lnt" id="hl-0-75"><a class="lnlinks" href="#hl-0-75">75</a>
+</span><span class="lnt" id="hl-0-76"><a class="lnlinks" href="#hl-0-76">76</a>
+</span><span class="lnt" id="hl-0-77"><a class="lnlinks" href="#hl-0-77">77</a>
+</span><span class="lnt" id="hl-0-78"><a class="lnlinks" href="#hl-0-78">78</a>
+</span><span class="lnt" id="hl-0-79"><a class="lnlinks" href="#hl-0-79">79</a>
+</span><span class="lnt" id="hl-0-80"><a class="lnlinks" href="#hl-0-80">80</a>
+</span><span class="lnt" id="hl-0-81"><a class="lnlinks" href="#hl-0-81">81</a>
+</span><span class="lnt" id="hl-0-82"><a class="lnlinks" href="#hl-0-82">82</a>
+</span><span class="lnt" id="hl-0-83"><a class="lnlinks" href="#hl-0-83">83</a>
+</span><span class="lnt" id="hl-0-84"><a class="lnlinks" href="#hl-0-84">84</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">baseURL = &#39;https://xhc757.github.io/&#39;
+</span></span><span class="line"><span class="cl">languageCode = &#39;zh-cn&#39;
+</span></span><span class="line"><span class="cl">title = &#39;电脑小知识&#39;
+</span></span><span class="line"><span class="cl">theme = &#39;PaperMod&#39;
+</span></span><span class="line"><span class="cl">hasCJKLanguage = true
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 语言设置
+</span></span><span class="line"><span class="cl">defaultContentLanguage = &#34;zh&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 单语言，必须在此处，以下设置之前
+</span></span><span class="line"><span class="cl">[languages]
+</span></span><span class="line"><span class="cl">[languages.zh]
+</span></span><span class="line"><span class="cl">    languageName = &#34;中文&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 此项为搜索功能必需
+</span></span><span class="line"><span class="cl">[outputs]
+</span></span><span class="line"><span class="cl">    home = [&#34;HTML&#34;, &#34;RSS&#34;, &#34;JSON&#34;] 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[params]
+</span></span><span class="line"><span class="cl">    defaultTheme = &#34;auto&#34; # light , dark
+</span></span><span class="line"><span class="cl">    ShowCodeCopyButtons = true
+</span></span><span class="line"><span class="cl">    ShowShareButtons = false
+</span></span><span class="line"><span class="cl">    ShowReadingTime = false
+</span></span><span class="line"><span class="cl">    ShowBreadCrumbs = false
+</span></span><span class="line"><span class="cl">    ShowWordCount = true
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    UseHugoToc = true
+</span></span><span class="line"><span class="cl">    ShowToc = true
+</span></span><span class="line"><span class="cl">    TocOpen = true
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    # home-info mode
+</span></span><span class="line"><span class="cl">    [params.homeInfoParams]
+</span></span><span class="line"><span class="cl">        Title = &#34;你好，我是匹老板 \U0001F44B&#34;
+</span></span><span class="line"><span class="cl">        Content = &#34;欢迎来到我的博客&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> #  [[params.socialIcons]]
+</span></span><span class="line"><span class="cl"> #       name = &#34;bilibili&#34;
+</span></span><span class="line"><span class="cl"> #       url = &#34;https://space.bilibili.com/1732187136/&#34;
+</span></span><span class="line"><span class="cl"> #  [[params.socialIcons]]
+</span></span><span class="line"><span class="cl"> #       name = &#34;douyin&#34;
+</span></span><span class="line"><span class="cl"> #       url = &#34;https://douyin.com/&#34;
+</span></span><span class="line"><span class="cl"> #  [[params.socialIcons]]
+</span></span><span class="line"><span class="cl"> #       name = &#34;VLINK&#34;
+</span></span><span class="line"><span class="cl"> #       url = &#34;https://vlink.cc/amd/&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    [params.assets]
+</span></span><span class="line"><span class="cl">        disableHLJS = false # 禁用代码高亮JS
+</span></span><span class="line"><span class="cl">        favicon = &#34;/images/avatar.jpg&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[menu]
+</span></span><span class="line"><span class="cl">    [[menu.main]]
+</span></span><span class="line"><span class="cl">        identifier = &#34;home&#34;
+</span></span><span class="line"><span class="cl">        name = &#34;首页&#34;
+</span></span><span class="line"><span class="cl">        url = &#34;/&#34;
+</span></span><span class="line"><span class="cl">        weight = 10
+</span></span><span class="line"><span class="cl">    [[menu.main]]
+</span></span><span class="line"><span class="cl">        identifier = &#34;archives&#34;
+</span></span><span class="line"><span class="cl">        name = &#34;归档&#34;
+</span></span><span class="line"><span class="cl">        url = &#34;/archives/&#34;
+</span></span><span class="line"><span class="cl">        weight = 20
+</span></span><span class="line"><span class="cl">    [[menu.main]]
+</span></span><span class="line"><span class="cl">        identifier = &#34;search&#34;
+</span></span><span class="line"><span class="cl">        name = &#34;搜索&#34;
+</span></span><span class="line"><span class="cl">        url = &#34;/search/&#34;
+</span></span><span class="line"><span class="cl">        weight = 30
+</span></span><span class="line"><span class="cl">    [[menu.main]]
+</span></span><span class="line"><span class="cl">        identifier = &#34;about&#34;
+</span></span><span class="line"><span class="cl">        name = &#34;关于&#34;
+</span></span><span class="line"><span class="cl">        url = &#34;/about/&#34;
+</span></span><span class="line"><span class="cl">        weight = 40
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[markup]
+</span></span><span class="line"><span class="cl">    [markup.highlight]
+</span></span><span class="line"><span class="cl">        noClasses = false
+</span></span><span class="line"><span class="cl">        anchorLineNos = true
+</span></span><span class="line"><span class="cl">        codeFences = true
+</span></span><span class="line"><span class="cl">        guessSyntax = true
+</span></span><span class="line"><span class="cl">        lineNos = true
+</span></span><span class="line"><span class="cl">        style = &#34;monokai&#34;
+</span></span><span class="line"><span class="cl">    [markup.goldmark.renderer]
+</span></span><span class="line"><span class="cl">        unsafe = true # 允许嵌入 HTML
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="推送到-github">推送到 Github<a hidden class="anchor" aria-hidden="true" href="#推送到-github">#</a></h3>
+<p>使用 hugo server 命令时生成的网页 url 前缀是基于 localhost 的，方便我们在本地预览。所以在推送前务必使用 hugo 重新生成网页，然后再使用 Sourcetree 把 public 文件夹下面的所有文件推送到 xhc757.github.io 仓库</p>
+<h3 id="感想">感想<a hidden class="anchor" aria-hidden="true" href="#感想">#</a></h3>
+<p>刚开始我还兴致勃勃的，但是很快我就有。我本来以为github.io这个域名没有被墙，现在发现是时断时续的。其次 Github 屏蔽了百度爬虫，百度搜索不到。</p>
+<h3 id="参考资料">参考资料<a hidden class="anchor" aria-hidden="true" href="#参考资料">#</a></h3>
+<p>1.<a href="https://docs.github.com/zh/pages">GitHub Pages 文档</a><br>
+2.<a href="https://hugo.opendocs.io/getting-started/">Hugo 文档</a><br>
+3.<a href="https://suxilan.github.io/notes/start-hugo-papermod/">Hugo + PaperMod 从零搭建教程</a><br>
+4.<a href="https://blog.lordash.de/post/guide/ff377f87efdbc8bc/">Hugo以及PaperMod主题的配置</a><br>
+5.<a href="https://her-cat.com/posts/2025/10/08/hugo-paper-mod/">折腾 Hugo PaperMod 主题</a><br>
+6.<a href="https://woft.name/np/posts/timeline-months-chinese-localization/">时间线（Archives）月份中文化</a><br>
+7.<a href="https://hubu8.github.io/posts/github-action%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E7%BC%96%E8%AF%91%E5%8F%91%E5%B8%83githubpages/">github action实现自动编译发布github Pages</a><br>
+8.<a href="https://www.pseudoyu.com/zh/2022/05/29/deploy_your_blog_using_hugo_and_github_action">Hugo + GitHub Action，搭建你的博客自动发布系统</a><br>
+9.<a href="https://www.playpi.org/2019010501.html">GitHub Pages 禁止百度蜘蛛爬取的问题</a><br>
+10.<a href="https://francecil.github.io/pages/195887/">给网站添加一只看板娘</a></p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="https://xhc757.github.io/">电脑小知识</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = '复制';
+
+        function copyingDone() {
+            copybutton.innerHTML = '已复制！';
+            setTimeout(() => {
+                copybutton.innerHTML = '复制';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>
